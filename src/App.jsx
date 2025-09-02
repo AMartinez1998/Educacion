@@ -5,26 +5,38 @@ import Login from './Login'
 import Dashboard from './Dashboard'
 import Cursos from "./Cursos";
 import Inicio from "./Inicio";
+import Curso6A from "./Curso6A";
+import Curso5C from "./Curso5c";
+import Alumnos from './Alumnos'
 
 export default function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  // 📌 Estado global de notas
+  const [notasAlumnos, setNotasAlumnos] = useState({});
 
   return (
     <Router>
       <Routes>
         <Route path="/" element={<Login setIsLoggedIn={setIsLoggedIn} />} />
 
-        {/* Dashboard como ruta padre */}
         <Route
           path="/app"
           element={
             isLoggedIn ? <Dashboard setIsLoggedIn={setIsLoggedIn} /> : <Navigate to="/" />
           }
         >
-          {/* Rutas hijas */}
-          <Route index element={<Inicio />} />        {/* /app */}
-          <Route path="cursos" element={<Cursos />} /> {/* /app/cursos */}
-          {/* Puedes agregar /alumnos y /perfil aquí */}
+          {/* Inicio */}
+          <Route index element={<Inicio />} />
+
+          {/* Cursos */}
+          <Route path="cursos" element={<Cursos />}>
+            <Route path="6A" element={<Curso6A notasAlumnos={notasAlumnos} setNotasAlumnos={setNotasAlumnos} />} />
+            <Route path="5C" element={<Curso5C notasAlumnos={notasAlumnos} setNotasAlumnos={setNotasAlumnos} />} />
+          </Route>
+
+          {/* Alumnos */}
+          <Route path="alumnos" element={<Alumnos notasAlumnos={notasAlumnos} />} />
         </Route>
       </Routes>
     </Router>

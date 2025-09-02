@@ -198,3 +198,145 @@ body {
   font-size: 1rem;
   color: #7f8c8d;
 }
+
+
+
+/* Contenedor principal */
+.cursos-container {
+  padding: 2rem;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+/* Título */
+.cursos-container h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #2c3e50;
+}
+
+/* Lista de enlaces */
+.cursos-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+/* Cada item */
+.cursos-list li {
+  margin: 0;
+}
+
+/* Enlaces estilizados como botones */
+.cursos-list a {
+  display: inline-block;
+  text-decoration: none;
+  background: #3498db;
+  color: white;
+  font-size: 1.2rem;
+  padding: 0.8rem 2rem;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.cursos-list a:hover {
+  background: #2980b9;
+  transform: scale(1.05);
+}
+
+/* Contenido cargado debajo (Outlet) */
+.cursos-content {
+  margin-top: 2rem;
+  text-align: left;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+
+
+
+
+.curso-container {
+  padding: 2rem;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+/* Título */
+.curso-container h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #2c3e50;
+}
+
+/* Tabla */
+.curso-table {
+  width: 80%;
+  margin: 0 auto 2rem;
+  border-collapse: collapse;
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Cabecera */
+.curso-table thead {
+  background: #3498db;
+  color: white;
+}
+
+.curso-table th,
+.curso-table td {
+  padding: 1rem;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  font-size: 1rem;
+}
+
+/* Última fila sin borde */
+.curso-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Inputs dentro de la tabla */
+.curso-table input {
+  width: 80px;
+  padding: 0.5rem;
+  font-size: 1rem;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.curso-table input:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 4px rgba(52, 152, 219, 0.6);
+}
+
+/* Botón */
+.curso-container button {
+  background: #2ecc71;
+  color: white;
+  border: none;
+  font-size: 1.1rem;
+  padding: 0.8rem 2rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.curso-container button:hover {
+  background: #27ae60;
+  transform: scale(1.05);
+}
