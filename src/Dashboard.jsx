@@ -18,7 +18,7 @@ export default function Dashboard({ setIsLoggedIn }) {
           <Link to="/app">Inicio</Link>
           <Link to="/app/cursos">Cursos</Link>
           <Link to="/app/alumnos">Notas Alumnos</Link>
-          <Link to="/app/perfil">Perfil</Link>
+          <Link to="/app/Contenidos">Contenidos</Link>
         </nav>
       </aside>
 

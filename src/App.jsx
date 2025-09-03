@@ -8,6 +8,7 @@ import Inicio from "./Inicio";
 import Curso6A from "./Curso6A";
 import Curso5C from "./Curso5c";
 import Alumnos from './Alumnos'
+import Contenidos from './Contenidos'
 
 export default function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -37,6 +38,9 @@ export default function App() {
 
           {/* Alumnos */}
           <Route path="alumnos" element={<Alumnos notasAlumnos={notasAlumnos} />} />
+
+          <Route path="Contenidos" element={<Contenidos/>} />
+
         </Route>
       </Routes>
     </Router>

@@ -1,11 +1,11 @@
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
-
 export default function Curso5C({ notasAlumnos, setNotasAlumnos }) {
   const navigate = useNavigate();
 
-  const alumnos = ["Ana", "Carlos", "Sofía", "Diego"];
+  // Alumnos del curso 5C
+  const alumnos = ["Ana", "Luis", "Sofía", "Carlos"];
 
   const [notas, setNotas] = useState(
     alumnos.reduce((acc, alumno) => {
@@ -15,19 +15,26 @@ export default function Curso5C({ notasAlumnos, setNotasAlumnos }) {
   );
 
   const handleChange = (alumno, tipo, valor) => {
+    let num = Number(valor);
+
+    // Validación: máximo 5 y mínimo 1
+    if (num > 5) num = 5;
+    if (num < 1) num = 1;
+
     setNotas((prev) => ({
       ...prev,
       [alumno]: {
         ...prev[alumno],
-        [tipo]: Number(valor),
+        [tipo]: num,
       },
     }));
   };
 
   const guardarNotas = () => {
+    // Guardamos las notas bajo la clave "5C"
     setNotasAlumnos((prev) => ({
       ...prev,
-      ...notas,
+      "5C": notas,
     }));
     navigate("/app/alumnos");
   };
