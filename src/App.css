@@ -424,3 +424,129 @@ div > h3 + table {
   margin-bottom: 0.5rem;
   font-size: 14px;
 }
+
+
+
+@media (max-width: 720px) {
+  /* Login */
+  .login-container {
+    width: 100%;
+    max-width: 95%;
+    padding: 2rem;
+  }
+
+  .login-container h2 {
+    font-size: 2rem;
+  }
+
+  /* Main container layout */
+  .main-container {
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Sidebar como barra superior */
+  .sidebar {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .sidebar h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0;
+  }
+
+  .sidebar nav {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .sidebar nav a {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  /* Content full width */
+  .content {
+    min-width: unset;
+    max-width: 100%;
+    padding: 1rem;
+  }
+
+  /* Header */
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .header h1 {
+    font-size: 1.8rem;
+  }
+
+  .header button {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Cards responsive */
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 1.2rem;
+  }
+
+  /* Cursos y listas */
+  .cursos-list {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  /* Tabla responsive sin hueco */
+  .table-container {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: 0 auto;
+  }
+
+  .curso-table,
+  table {
+    display: table; /* 🔹 volvemos a display: table para que ocupe todo */
+    width: 100%;    /* ancho completo del contenedor */
+    overflow-x: unset; /* quitamos scroll innecesario en la tabla */
+  }
+
+  .curso-table th,
+  .curso-table td,
+  table th,
+  table td {
+    font-size: 0.9rem;
+    padding: 0.6rem;
+    white-space: nowrap;
+  }
+
+  /* Contenidos */
+  .trimestres {
+    grid-template-columns: 1fr;
+  }
+
+  .trimestre-card {
+    padding: 1rem;
+  }
+
+  .trimestre-card h3 {
+    font-size: 1rem;
+  }
+
+  .trimestre-card li {
+    font-size: 0.85rem;
+  }
+}
+
